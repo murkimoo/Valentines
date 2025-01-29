@@ -44,35 +44,15 @@ body {
 
 /* General Button Styles */
 button {
-    background-color: red;
-    color: white;
     border: none;
     padding: 12px 24px;
     font-size: 18px;
     border-radius: 25px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-button:hover {
-    transform: scale(1.05);
 }
 
 /* Yes Button */
 .yes-btn {
-    background-color: #4caf50;
-}
-
-.yes-btn:hover {
-    background-color: #45a049;
-}
-
-/* No Button */
-.no-btn {
-    background-color: #ff4d4d;
-}
-
-.no-btn:hover {
-    background-color: #e43e3e;
-}
+    background-color
