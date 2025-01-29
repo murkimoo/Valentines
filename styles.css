@@ -13,25 +13,25 @@ body {
 .wrapper {
     position: relative;
     width: 90%;
-    max-width: 500px;
+    max-width: 400px; /* Reduced width */
     text-align: center;
     background: rgb(197, 40, 40);
-    padding: 30px 20px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .question {
-    font-size: 20px; /* Slightly smaller text to fit content */
+    font-size: 20px; /* Slightly smaller text */
     font-weight: bold;
     margin-bottom: 15px;
     color: #fff;
 }
 
 .gif {
-    max-width: 40%; /* Smaller GIF */
-    height: auto; 
-    margin-bottom: 15px;
+    max-width: 80%; /* Smaller GIF */
+    height: auto;
+    margin-bottom: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -39,7 +39,7 @@ body {
 .btn-group {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 15px; /* Ensure buttons don’t touch */
     margin-top: 10px;
 }
 
@@ -64,6 +64,7 @@ button {
     transform: scale(1.1);
 }
 
+/* Fix No Button Position */
 .no-btn {
     background-color: #dc3545;
     color: white;
