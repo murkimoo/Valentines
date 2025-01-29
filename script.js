@@ -7,26 +7,25 @@ const gif = document.querySelector(".gif");
 yesBtn.addEventListener("click", () => {
     question.innerHTML = "Being with you is my biggest blessing. I love you.";
     gif.src = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGNhdXh1b252b2F2b2U4cHRlNGkwMDZsajllaGF1cDJyb2p4NXl2YiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/G6N0pDDgDpLjUvNoyQ/giphy.gif";
-
+    
     // Hide the No button
     noBtn.style.display = "none";
 });
 
 // Make the No button move randomly on hover
 noBtn.addEventListener("mouseover", () => {
-    const wrapper = document.querySelector(".wrapper");
-    const wrapperRect = wrapper.getBoundingClientRect();
+    const btnGroup = document.querySelector(".btn-group"); 
+    const btnGroupRect = btnGroup.getBoundingClientRect();
     const noBtnRect = noBtn.getBoundingClientRect();
 
-    // Calculate max positions to keep the button inside the wrapper
-    const maxX = wrapperRect.width - noBtnRect.width;
-    const maxY = wrapperRect.height - noBtnRect.height;
+    // Calculate max positions inside the button container
+    const maxX = btnGroupRect.width - noBtnRect.width;
+    const maxY = btnGroupRect.height - noBtnRect.height;
 
-    // Generate random X and Y positions
-    const randomX = Math.random() * maxX;
-    const randomY = Math.random() * maxY;
+    // Random positions
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
 
-    // Apply new position
     noBtn.style.position = "absolute";
     noBtn.style.left = `${randomX}px`;
     noBtn.style.top = `${randomY}px`;

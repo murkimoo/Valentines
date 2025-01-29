@@ -1,58 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentines</title>
-    <link rel="stylesheet" href="styles.css">
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    color: #333;
+}
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #ffebf2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
-        .heart {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: red;
-            clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 80%, 20% 100%, 0% 35%);
-            opacity: 0.7;
-            animation: float 5s linear infinite;
-        }
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) scale(0.5);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-10vh) scale(1.2);
-                opacity: 0;
-            }
-        }
-        .gif-container {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-<div class="wrapper">
-    <h2 class="question">Archisa Das, Wanna be my valentine again and forever?</h2>
-    <img class="gif" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGt1ajVhdHo3NWM5cjl2eTNlbm9zd2l5MjY3amU2dWliZTUweTBibiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tpVKvAabWt3G5csMkT/giphy.gif" />
-    <div class="btn-group">
-      <button class="yes-btn">Yes</button>
-      <button class="no-btn">No</button>
-    </div>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
+.wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 350px; /* Reduced width */
+    text-align: center;
+    background: rgb(197, 40, 40);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.question {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.gif {
+    max-width: 70%; /* Smaller GIF */
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Ensure buttons don’t overlap */
+    margin-top: 10px;
+}
+
+/* General Button Styles */
+button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.yes-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.yes-btn:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+
+/* No Button */
+.no-btn {
+    background-color: #dc3545;
+    color: white;
+    position: relative; /* Allow movement but starts beside Yes button */
+}
+
+.no-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+}
