@@ -35,9 +35,9 @@ body {
 }
 
 .gif {
-    max-width: 80%; /* Reduce width */
+    max-width: 50%; /* Reduce width */
     height: auto; /* Maintain aspect ratio */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
