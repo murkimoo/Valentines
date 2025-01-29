@@ -13,7 +13,7 @@ body {
 .wrapper {
     position: relative;
     width: 90%;
-    max-width: 400px; /* Reduced width */
+    max-width: 350px; /* Reduced width */
     text-align: center;
     background: rgb(197, 40, 40);
     padding: 20px;
@@ -22,16 +22,16 @@ body {
 }
 
 .question {
-    font-size: 20px; /* Slightly smaller text */
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #fff;
+    color: white;
 }
 
 .gif {
-    max-width: 80%; /* Smaller GIF */
+    max-width: 70%; /* Smaller GIF */
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -39,7 +39,7 @@ body {
 .btn-group {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Ensure buttons don’t touch */
+    gap: 15px; /* Ensure buttons don’t overlap */
     margin-top: 10px;
 }
 
@@ -64,11 +64,11 @@ button {
     transform: scale(1.1);
 }
 
-/* Fix No Button Position */
+/* No Button */
 .no-btn {
     background-color: #dc3545;
     color: white;
-    position: relative; /* Removes absolute positioning */
+    position: relative; /* Allow movement but starts beside Yes button */
 }
 
 .no-btn:hover {
